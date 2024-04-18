@@ -476,10 +476,19 @@
 			}), 500);
 		}));
 	}
+	function moveOnScroll() {
+		window.addEventListener('scroll', function () {
+
+			let scrollPosition = this.window.scrollY;
+			const firstImg = this.document.querySelector('.logotype')
+			firstImg.style.transform = `rotate(` + scrollPosition / 5 + `deg)`
+		})
+	}
 	window["FLS"] = true;
 	menuInit();
 	spollers();
 	headerScroll();
 	pageNavigation();
 	preloader();
+	moveOnScroll()
 })();

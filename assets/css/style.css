@@ -1047,6 +1047,10 @@ h6,
 	align-self: center
 }
 
+.spollers__item-padding {
+	padding-bottom: 20px;
+}
+
 /*  */
 
 .lead {
@@ -13521,6 +13525,7 @@ pre {
 	margin: 0;
 }
 
+/* !!!!!! */
 .header .widget .widget-item p {
 	opacity: .7;
 	font-size: 14px;
