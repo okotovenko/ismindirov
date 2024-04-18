@@ -29,7 +29,7 @@
 		<!-- navigation -->
 		<header class="nav">
 			<div class="nav__container">
-				<a href='#' class='nav__logo' data-goto="#home">
+				<a href='#' class='nav__logo'>
 					<picture>
 						<source class="" srcset="assets/imgs/logo.webp" type="image/webp">
 						<img class="" src="assets/imgs/logo.png" alt="logo">
@@ -39,13 +39,19 @@
 					<button type='button' class='menu__icon icon-menu'> <span></span></button>
 					<nav class='menu__body'>
 						<ul class='menu__list'>
-							<li class='menu__item'><a href='#' class='menu__link' data-goto="#home">Home</a></li>
-							<li class='menu__item'><a href='#' class='menu__link' data-goto="#about">About</a></li>
-							<li class='menu__item'><a href='#' class='menu__link' data-goto="#skills">Skills</a></li>
-							<li class='menu__item'><a href='#' class='menu__link'
-									data-goto="#certifications">Certifications</a>
+							<li class='menu__item'><a href='#' class='menu__link' data-goto="#home"
+									data-goto-top="100">Home</a>
 							</li>
-							<li class='menu__item'><a href='#' class='menu__link' data-goto="#contact">Contact</a></li>
+							<li class='menu__item'><a href='#' class='menu__link' data-goto="#about"
+									data-goto-top="100">About</a>
+							</li>
+							<li class='menu__item'><a href='#' class='menu__link' data-goto="#skills"
+									data-goto-top="100">Skills</a></li>
+							<li class='menu__item'><a href='#' class='menu__link' data-goto="#certifications"
+									data-goto-top="100">Certifications</a>
+							</li>
+							<li class='menu__item'><a href='#' class='menu__link' data-goto="#contact"
+									data-goto-top="100">Contact</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -54,10 +60,10 @@
 		<!-- End of navigation -->
 
 		<!-- hero -->
-		<section class="header" id="home" data-watch="navigator" data-watch-threshold="0.5">
+		<section class="header">
 			<div class="container about-section">
 				<div class="infos">
-					<h6 class="subtitle">Hello,I'm</h6>
+					<h6 class="subtitle" id="home" data-watch="navigator" data-watch-threshold="0.2">Hello,I'm</h6>
 					<h6 class="title">Ismindirov Vlad</h6>
 					<p>Senior DevOps Engineer</p>
 
@@ -105,10 +111,10 @@
 		<!-- End of hero -->
 
 		<!-- about -->
-		<section id="about" class="section mt-3" data-watch="navigator" data-watch-threshold="0.8">
+		<section class="section mt-3">
 			<div class="container mt-5">
 				<div class="row text-center text-md-left">
-					<div class="col-md-3">
+					<div id="about" class="col-md-3" data-watch="navigator" data-watch-threshold="0.2">
 						<picture>
 							<source class="img-thumbnail mb-4" srcset="assets/imgs/Ismsndirov.webp" type="image/webp">
 							<img class="img-thumbnail mb-4" src="assets/imgs/Ismsndirov.png" alt="Ismsndirov">
@@ -141,9 +147,9 @@
 		<!-- End of about -->
 
 		<!-- skills -->
-		<section id="skills" class="section skills-section" data-watch="navigator" data-watch-threshold="0.5">
+		<section class="section skills-section">
 			<div class="container text-center">
-				<h6 class="subtitle">Skills</h6>
+				<h6 id="skills" class="subtitle" data-watch="navigator" data-watch-threshold="0.5">Skills</h6>
 				<h6 class="section-title mb-4">Why Choose Me</h6>
 				<p class="mb-5 pb-4">Here's why I'm a strong candidate for your projects and how I can contribute to your
 					team
@@ -218,9 +224,10 @@
 		<!-- End of skills -->
 
 		<!-- certifications -->
-		<section id="certifications" class="section" data-watch="navigator" data-watch-threshold="0.5">
+		<section class="section">
 			<div class="container text-center">
-				<h6 class="subtitle">Certifications</h6>
+				<h6 id="certifications" class="subtitle" data-watch="navigator" data-watch-threshold="0.3">Certifications
+				</h6>
 				<h6 class="section-title mb-4">My Professional Certifications</h6>
 				<p class="mb-5 pb-4">Browse through my industry-recognized certifications that validate my expertise and
 					skills
@@ -270,9 +277,9 @@
 		<!-- End of certifications -->
 
 		<!-- contact -->
-		<section id="contact" class="position-relative section" data-watch="navigator" data-watch-threshold="0.8">
+		<section class="position-relative section">
 			<div class="container text-center">
-				<h2 class="subtitle">Let's Collaborate</h2>
+				<h2 id="contact" class="subtitle" data-watch="navigator" data-watch-threshold="0.2">Let's Collaborate</h2>
 				<h2 class="section-title mb-4">Reach Out To Me</h2>
 				<p class="contact-text">Looking to dive into DevOps? Need help with cloud setups? Or maybe you're close to a
 					big idea?<br>I'm all ears and ready to help. Whether it's partnering up, asking questions, or just a good
