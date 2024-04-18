@@ -47,6 +47,7 @@
 			if (bodyLockStatus && e.target.closest(".icon-menu")) {
 				bodyLockToggle();
 				document.documentElement.classList.toggle("menu-open");
+				console.log(qqqqqq)
 			}
 		}));
 	}
