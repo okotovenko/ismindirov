@@ -28,8 +28,13 @@
 
 		<!-- navigation -->
 		<header class="nav">
-			<div class="nav__container">
-				<a href='' class='nav__logo'><img src='/assets/imgs/logo.png' alt='logo'></a>
+			<div class="nav__container" data-goto="#home">
+				<a href='#' class='nav__logo'>
+					<picture>
+						<source class="" srcset="assets/imgs/logo.webp" type="image/webp">
+						<img class="" src="assets/imgs/logo.png" alt="logo">
+					</picture>
+				</a>
 				<div class='nav__menu menu'>
 					<button type='button' class='menu__icon icon-menu'> <span></span></button>
 					<nav class='menu__body'>
@@ -46,36 +51,6 @@
 				</div>
 			</div>
 		</header>
-
-		<!-- <header class="navbar navbar-expand-lg navbar-light fixed-top" data-spy="affix" data-offset-top="0">
-		<div class="container">
-			<a class="navbar-brand navbar-logo" href="#" data-goto="#home"><img src="assets/imgs/logo.png" alt=""></a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav ml-auto align-items-center">
-					<li class="nav-item">
-						<a class="nav-link" href="#" data-goto="#home">Home</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#" data-goto="#about">About</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#" data-goto="#skills">Skills</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#" data-goto="#certifications">Certifications</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link contact-btn " href="#" data-goto="#contact">Contact</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</header> -->
 		<!-- End of navigation -->
 
 		<!-- hero -->
@@ -234,7 +209,8 @@
 								Kubernetes Administrator</strong>, and HashiCorp Certified: <strong>Terraform Associate</strong>
 							certifications, evidencing advanced knowledge and skills in cloud services, container
 							orchestration,
-							and infrastructure as code.</p>
+							and infrastructure as code.
+						</p>
 					</div>
 				</div>
 			</div>
