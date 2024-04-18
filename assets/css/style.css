@@ -339,8 +339,9 @@ strong:hover::before {
 
 /* Certifications section styles */
 #certifications {
-	padding-bottom: 60px;
-	background-color: #f8f9fa;
+	padding-bottom: 5px;
+	margin-bottom: 0;
+	/* background-color: #f8f9fa; */
 	/* Light gray background for the section */
 }
 
@@ -765,7 +766,7 @@ h6,
 
 .section {
 	position: relative;
-	padding: 5rem 0;
+	padding: 2rem 0;
 }
 
 .section:nth-child(even) {
@@ -785,6 +786,7 @@ h6,
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 	gap: 20px;
+	padding-top: 20px;
 }
 
 .certification__item {
@@ -923,6 +925,126 @@ h6,
 	color: #22652f !important;
 	-webkit-transition: all 0.3s ease 0s;
 	transition: all 0.3s ease 0s;
+}
+
+.projects__container {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: space-around;
+	text-align: center;
+}
+
+.projects__items {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	column-gap: 10px;
+	row-gap: 20px;
+}
+
+.projects__item {
+	width: 100%;
+	height: 14.5625rem;
+	max-width: 16.6875rem;
+	position: relative;
+	-webkit-transition: all .3s ease 0s;
+	transition: all .3s ease 0s;
+	border-radius: .125rem;
+	overflow: hidden;
+}
+
+.projects__item picture img,
+.projects__item picture source {
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	object-fit: cover
+}
+
+.projects__item a {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	position: relative;
+	width: 100%;
+	height: 100%
+}
+
+.projects__item a>img,
+.projects__item a>picture {
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	object-fit: cover
+}
+
+/* .projects__item a::before {
+	content: "";
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 0;
+	height: 0;
+	background: rgba(38, 128, 67, 0.9);
+	opacity: 0;
+	-webkit-transition: all .3s ease 0s;
+	transition: all .3s ease 0s
+} */
+
+.projects__item span {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	font-size: 18px;
+	font-weight: 700;
+	color: #ffffff;
+	opacity: 0;
+	pointer-events: none;
+	background: rgba(38, 128, 67, 0.9);
+	padding: 10px;
+	transition: all 0.3s ease 0s;
+	border-radius: 50px;
+	min-width: 80px;
+}
+
+.projects__item--project>img,
+.projects__item--project>picture {
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	object-fit: cover
+}
+
+.projects__item--project picture img,
+.projects__item--project picture source {
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	object-fit: cover
+}
+
+.projects__button {
+	-ms-flex-item-align: center;
+	-ms-grid-row-align: center;
+	align-self: center
 }
 
 /*  */
@@ -10366,7 +10488,7 @@ button.bg-dark:focus {
 
 .mb-5,
 .my-5 {
-	margin-bottom: 3rem !important;
+	/* margin-bottom: 3rem !important; */
 }
 
 .ml-5,
@@ -13417,6 +13539,10 @@ pre {
 	.header .widget .widget-item p {
 		font-size: 13px;
 	}
+
+	.projects__item {
+		max-width: 100% !important;
+	}
 }
 
 .header-title {
@@ -13450,13 +13576,44 @@ pre {
 	background: #ffcbbd;
 }
 
-
-
 @media (any-hover: hover) {
 	.menu__link:hover {
 		color: #22652f;
 		-webkit-transition: all 0.3s ease 0s;
 		transition: all 0.3s ease 0s;
 		text-decoration: none;
+	}
+
+	.projects__item a:hover::before {
+		left: 0;
+		top: 0;
+		opacity: 1;
+		width: 100%;
+		height: 100%;
+		-webkit-transition: all .3s ease 0s;
+		transition: all .3s ease 0s
+	}
+
+	.projects__item:hover span {
+		opacity: 1
+	}
+
+	/* .projects__item:hover img {
+		transition: all 0.3s ease 0s;
+		filter: blur(5px);
+	} */
+
+	.projects__item:hover {
+		-webkit-transform: scale(1.05);
+		-ms-transform: scale(1.05);
+		transform: scale(1.05);
+		-webkit-transition: all .3s ease 0s;
+		transition: all .3s ease 0s
+	}
+
+	.projects__item--project:hover {
+		-webkit-transform: none;
+		-ms-transform: none;
+		transform: none
 	}
 }
